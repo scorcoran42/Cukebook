@@ -8,7 +8,6 @@ import cucumber.api.SnippetType;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		dryRun = true,
 		features = {"src/test/resources/"},
 		plugin = {"pretty", "html:target/cucumber-html-report", "junit:target/cucumber-junit-report/allcukes.xml"},
 		tags = {"@Runme"},
