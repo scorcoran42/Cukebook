@@ -1,7 +1,8 @@
 package implementation;
 
 public class Account {
-	public int balance = 0;
+	private int balance = 0;
+	
 	public Account (String acctType, int initialAmount) {
 		balance = initialAmount;
 	}
@@ -12,10 +13,8 @@ public class Account {
 	public int requestCash(int requestAmount){
 		
 		if (requestAmount <= balance) {
-			System.out.println("if");
 			return requestAmount;
 		} else {
-			System.out.println("else");
 			return 0;
 		}
 	}

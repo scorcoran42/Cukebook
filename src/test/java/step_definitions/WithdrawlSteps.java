@@ -8,20 +8,17 @@ import cucumber.api.java.en.When;
 import static org.junit.Assert.*;
 
 public class WithdrawlSteps {
-	Account myAccount = new Account("checking", 0);
-	public int dispensedAmount = 0;
+	Account myAccount;
+	
 	@Given("^I have \\$(\\d+) in my (\\w+) account$")
 	public void iHave$InMyAccount(int amount, String account) throws Throwable {
-	    Account myAccount = new Account (account, amount);
-	    System.out.println("balance "+myAccount.getBalance());
+	    myAccount = new Account(account, amount);
 	}
 
 	@When("^I request \\$(\\d+) from my (\\w+) account$")
 	public void iRequest$FromMyAccount(int amount, String account) throws Throwable {
-		System.out.println("balance "+myAccount.getBalance());
-		System.out.println("requested "+amount);
-		dispensedAmount = (myAccount.requestCash(amount));
-		System.out.println("dispensed "+dispensedAmount);
+		myAccount.requestCash(amount);
+				
 	}
 
 	@Then("^\\$(\\d+) should be dispensed from the ATM$")
