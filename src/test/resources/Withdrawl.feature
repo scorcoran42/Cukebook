@@ -6,7 +6,7 @@ Scenario Outline: Withdrawl from account via ATM
 	When I request $<CashRequest> from my <AcctType> account
 	Then $<Dispensed> should be dispensed from the ATM
 	
-Examples:
+Scenarios:
 |Balance|AcctType|CashRequest|Dispensed|
 |100    |checking|20         |20       |
 |100    |checking|100        |100      |
