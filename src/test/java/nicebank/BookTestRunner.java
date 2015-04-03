@@ -1,4 +1,4 @@
-package step_definitions;
+package nicebank;
 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
@@ -11,7 +11,8 @@ import cucumber.api.SnippetType;
 		features = {"src/test/resources/"},
 		plugin = {"pretty", "html:target/cucumber-html-report", "junit:target/cucumber-junit-report/allcukes.xml"},
 		tags = {"@Runme"},
-		snippets = SnippetType.CAMELCASE
+		snippets = SnippetType.CAMELCASE,
+		dryRun = false
 )
 
 public class BookTestRunner {

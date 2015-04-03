@@ -1,13 +1,9 @@
 Feature: ATM Withdrawl
 
 @Runme
-Scenario Outline: Withdrawl from account via ATM
-	Given I have $<Balance> in my <AcctType> account
-	When I request $<CashRequest> from my <AcctType> account
-	Then $<Dispensed> should be dispensed from the ATM
+Scenario: Withdrawl from account via ATM
+	Given I have deposited $100.00 in my account
+	When I withdraw $20
+	Then $20 should be dispensed
 	
-Scenarios:
-|Balance|AcctType|CashRequest|Dispensed|
-|100    |checking|20         |20       |
-|100    |checking|100        |100      |
-|100    |savings |101        |0        |
+
