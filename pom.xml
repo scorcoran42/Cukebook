@@ -57,6 +57,24 @@
       <artifactId>jetty-webapp</artifactId>
       <version>9.2.10.v20150310</version>
     </dependency>
+    
+    <dependency>
+    	<groupId>org.eclipse.jetty</groupId>
+    	<artifactId>jetty-http</artifactId>
+    	<version>9.2.8.v20150217</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.eclipse.jetty</groupId>
+    	<artifactId>jetty-io</artifactId>
+    	<version>9.2.8.v20150217</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.eclipse.jetty</groupId>
+    	<artifactId>jetty-websocket</artifactId>
+    	<version>8.1.16.v20140903</version>
+    </dependency>
   </dependencies>
   
 </project>
